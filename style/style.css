@@ -1,0 +1,242 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #ff362c;
+}
+
+.search {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+}
+
+.search .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 1.5em;
+  color: #9098a9;
+  font-weight: 500;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+
+.search .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #ff362c;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+  transition: all 0.15s ease;
+}
+
+.search div.smart-search input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 0;
+  height: 34px;
+  font-size: 1.4em;
+  font-weight: 500;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  transition: all 0.15s ease;
+}
+
+.search div.smart-search input:focus {
+  border-bottom: 2px solid red;
+  background: none;
+  outline: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 680px;
+  margin-top: 50px;
+}
+
+.item-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+  min-width: 300px;
+  height: 100%;
+  max-height: 600px;
+  margin: 20px 40px 0 0;
+  background: #e0e0e0;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.item-video:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 35%;
+  max-height: 200px;
+  background-size: cover;
+  background: url("https://i.ytimg.com/vi/DXUAyRRkI6k/mqdefault.jpg") no-repeat 50% 50%;
+}
+
+.title-link {
+  width: 100%;
+  height: 15%;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: rgba(0, 0, 0, 0.40);
+}
+
+.statistics {
+  display: grid;
+  grid: 33% 33% 33% / 20% 80%;
+  align-items: center;
+  width: 75%;
+  max-height: 150px;
+  height: 30%;
+  margin-top: 20px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 1em;
+  color: black;
+  text-align: center;
+}
+
+.item-video p {
+  width: 90%;
+  height: 30%;
+  font-size: 1.3em;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-name > i {
+  margin-right: 40px;
+}
+
+.smart-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.smart-search > i {
+  font-size: 1.3em;
+}
+
+.smart-search > i:hover {
+  color: red;
+}
+
+.smart-search > i:active {
+  transform: scale(0.8);
+}
+
+@media screen and (min-width: 450px) and (orientation: portrait) {
+
+  .item-video {
+    width: 40%;
+    height: 70%;
+    min-height: 580px;
+    margin: 50px auto 0 auto;
+  }
+}
+
+@media screen and (max-device-width: 420px) and (orientation: portrait) {
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #ff362c;
+  }
+
+  .smart-search {
+    font-size: 2.3em;
+  }
+
+  .item-video {
+    width: 60%;
+    min-width: 460px;
+    height: 70%;
+    min-height: 580px;
+    margin: 50px auto 0 auto;
+  }
+
+  .video-container {
+    min-height: 700px;
+  }
+
+  .statistics {
+    font-size: 1.3em;
+  }
+
+  .item-video p {
+    font-size: 1.5em;
+  }
+
+  .cards {
+    min-height: 712px;
+  }
+
+  .search {
+    width: 60%;
+    max-width: 500px;
+  }
+
+  .search .label {
+    font-size: 1.9em;
+  }
+
+  .search input {
+    font-size: 2em;
+  }
+
+  .item-video {
+    margin: 0;
+  }
+}
+
+@media screen and (max-device-height: 420px) and (orientation: landscape) {
+  .item-video {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) and (orientation: portrait) {
+
+  .item-video {
+    width: 30%;
+    height: 70%;
+    min-height: 580px;
+    margin: 50px auto 0 auto;
+  }
+
+}
